@@ -12,7 +12,7 @@ html, body {
   height: 100%;
 }
 body {
-  line-height: 1.5;
+  line-height: 2;
   -webkit-font-smoothing: antialiased;
   font-family: 'Quicksand', sans-serif;
   background: linear-gradient(#134d71, #f7e4bf);
@@ -58,7 +58,8 @@ black - #000000;
 }
 
 .title-header {
-  margin: 5%;}
+  margin: 3%;
+  }
 
 .message-header {
 }
