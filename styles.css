@@ -93,9 +93,17 @@ button {
   color: white;
   border-radius: 5px;
   width: 24vh;
+  border-color: white;
 }
 
-.inactive {
+button:hover {
+  /* border-color: white; */
+  color: black;
+  background-color: #FFB652;
+}
+
+button:disabled {
+  color: white;
   background-color: #959595;
 }
 
@@ -124,6 +132,49 @@ button {
 
 .clear {
   width: 10vh;
+}
+
+.loader {
+  border: 16px solid #FCEEBB;
+  border-top: 16px solid #F1A3AF;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin .7s linear infinite;
+  /* box-shadow: 0px 0px 5px 5px rgba(0, 0, .5, 0.2); */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in {
+  animation: fadeIn ease 2s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.fade-out {
+  animation: fadeOut ease 2s;
+}
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
 }
 
 .hidden {
