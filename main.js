@@ -1,7 +1,7 @@
 /* ~~~~~~~~~~~~~~~~ Query Selectors ~~~~~~~~~~~~~~~~~*/
 var choiceAffirmation = document.getElementById("choice-affirmation");
 var choiceMantra = document.getElementById("choice-mantra");
-var buddhaIcon = document.getElementById("meditate-svg");
+var buddhaIcon = document.querySelector(".meditate-svg");
 var messageResult = document.getElementById("message-result");
 var messageButton = document.getElementById("receive-message");
 var clearButton = document.getElementById("clear");
@@ -26,14 +26,7 @@ function hide(element) {
 
 function fadeIn(element) {
   element.classList.add("fade-in");
-  // element.classList.remove("fade-out");
   element.classList.remove("hidden");
-}
-
-function fadeOut(element) {
-  element.classList.add("fade-out");
-  // element.classList.remove("fade-in");
-  element.classList.add("hidden");
 }
 
 function getRandom(array) {
@@ -53,20 +46,22 @@ function selectChoice() {
 };
 
 function getMessage() {
-  fadeOut(buddhaIcon);
+  hide(buddhaIcon);
   hide(messageResult);
   hide(clearButton);
   show(loader);
   selectChoice();
-  runTimer(hide, loader, 1000);
-  runTimer(fadeIn, messageResult, 1000);
-  runTimer(fadeIn, clearButton, 1000);
+  runTimer(hide, loader, 500);
+  runTimer(fadeIn, messageResult, 500);
+  runTimer(fadeIn, clearButton, 500);
 };
 
 function clearMessage() {
-  fadeOut(messageResult)
-  fadeOut(clearButton)
+  hide(messageResult)
+  hide(clearButton)
   fadeIn(buddhaIcon)
+
+
 };
 
 function activateButton() {

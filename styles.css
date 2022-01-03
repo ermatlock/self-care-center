@@ -154,8 +154,9 @@ button:disabled {
 }
 
 .fade-in {
-  animation: fadeIn ease 2s;
+  animation: fadeIn ease 1.5s;
 }
+
 @keyframes fadeIn {
   0% {
     opacity:0;
@@ -166,8 +167,9 @@ button:disabled {
 }
 
 .fade-out {
-  animation: fadeOut ease 2s;
+  animation: fadeOut ease 1.5s;
 }
+
 @keyframes fadeOut {
   0% {
     opacity:1;
